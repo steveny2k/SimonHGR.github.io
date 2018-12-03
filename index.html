@@ -9,7 +9,7 @@
         var button = document.getElementById("buttontoclick");
         var input = document.getElementById("inputregion");
         console.log("list is " + list + " button is " + button + " and input is " + input);
-        const clickHandler = function(e) {
+        button.onclick = function(e) {
           var text = input.getText();
           console.log("click, text is " + text);
           var textElem = document.createTextNode(text);
