@@ -1,4 +1,22 @@
 <html>
+  <head>
+    <script type="javascript">
+    (function(){
+      var list = Document.getElementById("theList");
+      var button = Document.getElementById("buttontoclick");
+      var input = Document.getElementById("inputregion");
+      console.log("list is " + list + " button is " + button + " and input is " + input);
+      const clickHandler = function(e) {
+        var text = input.getText();
+        console.log("click, text is " + text);
+        var textElem = Document.createTextNode(text);
+        var listItem = Document.createElement("li");
+        listItem.appendChild(textElem);
+        ul.appendChild(listItem);
+      };
+    })();
+    </script>
+  </head>
 <body>
 <h1 id="header">Test This Page</h1>
 <div id="inputregion">
@@ -7,7 +25,7 @@
 </div>
 <div id="outputregion">
   <h2>Data collected</h2>
-  <ul>
+  <ul id="theList">
 
   </ul>
 </div>
