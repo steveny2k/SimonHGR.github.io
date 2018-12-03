@@ -3,15 +3,15 @@
     <script type="text/javascript">
       console.log("Hello...");
     (function(){
-      var list = Document.getElementById("theList");
-      var button = Document.getElementById("buttontoclick");
-      var input = Document.getElementById("inputregion");
+      var list = document.getElementById("theList");
+      var button = document.getElementById("buttontoclick");
+      var input = document.getElementById("inputregion");
       console.log("list is " + list + " button is " + button + " and input is " + input);
       const clickHandler = function(e) {
         var text = input.getText();
         console.log("click, text is " + text);
-        var textElem = Document.createTextNode(text);
-        var listItem = Document.createElement("li");
+        var textElem = document.createTextNode(text);
+        var listItem = document.createElement("li");
         listItem.appendChild(textElem);
         ul.appendChild(listItem);
       };
